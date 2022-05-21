@@ -1,8 +1,8 @@
 import { mount } from "@cypress/vue";
-import HelloWorld from "../HelloWorld.vue";
+import HelloWorld from "./HelloWorld.vue";
 
 describe("HelloWorld", () => {
-  it("playground", () => {
+  it("playground from the component", () => {
     mount(HelloWorld, { props: { msg: "Hello Cypress" } });
   });
 
