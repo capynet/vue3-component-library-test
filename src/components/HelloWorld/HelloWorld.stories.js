@@ -1,4 +1,4 @@
-import HelloWorld from "./HelloWorld";
+import HelloWorld from "./HelloWorld.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
