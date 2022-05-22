@@ -1,6 +1,13 @@
 {
   "name": "components-library-2",
   "version": "0.0.0",
+  "files": ["library"],
+  "module": "./library/components.es.js",
+  "exports": {
+    ".": {
+      "import": "./library/components.es.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

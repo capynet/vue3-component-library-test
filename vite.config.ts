@@ -12,6 +12,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: "library",
     lib: {
       entry: path.resolve(__dirname, "lib/main.js"),
       name: "Components library",
