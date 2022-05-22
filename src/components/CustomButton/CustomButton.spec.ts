@@ -1,5 +1,5 @@
 import { mount } from "@cypress/vue";
-import Button from "./Button.vue";
+import Button from "./CustomButton.vue";
 
 describe("Button", () => {
   it("playground from the component", () => {
