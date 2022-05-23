@@ -1,11 +1,13 @@
 {
   "name": "components-library-2",
   "version": "0.0.0",
-  "files": ["library"],
-  "module": "./library/components.es.js",
+  "files": ["dist"],
+  "main": "./dist/components.umd.js",
+  "module": "./dist/components.es.js",
   "exports": {
     ".": {
-      "import": "./library/components.es.js"
+      "import": "./dist/components.es.js",
+      "require": "./dist/components.umd.js"
     }
   },
   "scripts": {
