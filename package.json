@@ -2,8 +2,11 @@
   "name": "components-library-2",
   "version": "1.0.0",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "types/*.d.ts"
   ],
+  "typings": "types/components.d.ts",
   "main": "./dist/components.umd.js",
   "module": "./dist/components.es.js",
   "exports": {
@@ -13,10 +16,13 @@
     }
   },
   "types": "./dist/types/index.d.ts",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "build:library": "vue-tsc --declaration --emitDeclarationOnly && vite build",
+    "build:library": "vite build",
     "preview": "vite preview --port 5050",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress open'",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'",
