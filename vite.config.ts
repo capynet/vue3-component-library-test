@@ -16,6 +16,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/components.ts"),
       name: "ComponentsLibrary",
       fileName: (format) => `components.${format}.js`,
+      formats: ["es"],
     },
     rollupOptions: {
       external: ["vue"],

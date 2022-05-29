@@ -1,4 +1,4 @@
-import { defineComponent, openBlock, createElementBlock, toDisplayString, computed, normalizeClass, unref, normalizeStyle } from "vue";
+import { defineComponent, openBlock, createElementBlock, toDisplayString } from "vue";
 var HelloWorld_vue_vue_type_style_index_0_scoped_true_lang = "";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -20,37 +20,18 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   }
 });
 var HelloWorld = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-3b7b64fc"]]);
-var CustomButton_vue_vue_type_style_index_0_lang = "";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   name: "CustomButton",
-  props: {
-    label: null,
-    primary: { type: Boolean },
-    size: null,
-    backgroundColor: null
-  },
   emits: ["click"],
   setup(__props, { emit }) {
-    const props = __props;
-    const classes = computed(() => ({
-      "storybook-button": true,
-      "storybook-button--primary": props.primary,
-      "storybook-button--secondary": !props.primary,
-      [`storybook-button--${props.size || "medium"}`]: true
-    }));
-    const style = computed(() => ({
-      backgroundColor: props.backgroundColor
-    }));
     const onClick = () => {
       emit("click");
     };
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("button", {
         type: "button",
-        class: normalizeClass(unref(classes)),
-        onClick,
-        style: normalizeStyle(unref(style))
-      }, toDisplayString(__props.label), 7);
+        onClick
+      }, "Test");
     };
   }
 });
