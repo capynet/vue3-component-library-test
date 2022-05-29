@@ -5,10 +5,11 @@
   "files": [
     "dist"
   ],
-  "module": "./dist/components.es.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.es.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/components.es.js"
+      "import": "./dist/index.es.js"
     }
   },
   "scripts": {
@@ -56,6 +57,7 @@
     "start-server-and-test": "^1.14.0",
     "typescript": "~4.6.3",
     "vite": "^2.9.5",
+    "vite-plugin-dts": "^1.2.0",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^0.34.7"
   }

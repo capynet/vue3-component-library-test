@@ -2,10 +2,11 @@ import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [dts(), vue()],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -13,9 +14,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/components.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "ComponentsLibrary",
-      fileName: (format) => `components.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
       formats: ["es"],
     },
     rollupOptions: {
