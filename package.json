@@ -1,6 +1,7 @@
 {
   "name": "components-library-2",
   "version": "1.0.0",
+  "license": "MIT",
   "files": [
     "dist"
   ],
@@ -23,7 +24,7 @@
     "test:unit": "cypress open-ct",
     "test:unit:ci": "cypress run-ct --quiet --reporter spec",
     "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
