@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "start-storybook -p 6006",
     "build": "vue-tsc --noEmit && vite build",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress open'",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'",
@@ -21,7 +21,6 @@
     "test:unit:ci": "cypress run-ct --quiet --reporter spec",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
-    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -33,13 +32,13 @@
     "@cypress/vite-dev-server": "^2.2.2",
     "@cypress/vue": "^3.1.1",
     "@rushstack/eslint-patch": "^1.1.0",
-    "@storybook/addon-actions": "^6.5.3",
-    "@storybook/addon-essentials": "^6.5.3",
-    "@storybook/addon-interactions": "^6.5.3",
-    "@storybook/addon-links": "^6.5.3",
+    "@storybook/addon-actions": "^6.5.6",
+    "@storybook/addon-essentials": "^6.5.6",
+    "@storybook/addon-interactions": "^6.5.6",
+    "@storybook/addon-links": "^6.5.6",
     "@storybook/builder-vite": "^0.1.35",
     "@storybook/testing-library": "^0.0.11",
-    "@storybook/vue3": "^6.5.3",
+    "@storybook/vue3": "^6.5.6",
     "@types/node": "^16.11.27",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vue/eslint-config-prettier": "^7.0.0",
