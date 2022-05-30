@@ -7,12 +7,7 @@ export default {
   component: CustomButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
     onClick: {},
-    size: {
-      control: { type: "select" },
-      options: ["small", "medium", "large"],
-    },
   },
 };
 
@@ -32,17 +27,15 @@ const Template = (args) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
-  primary: true,
-  label: "Button",
+  label: "Primary",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: "Button",
+  label: "Secondary",
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  size: "large",
-  label: "Button",
+  label: "Large",
 };

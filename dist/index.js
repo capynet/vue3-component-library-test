@@ -1,12 +1,4 @@
 import { defineComponent, openBlock, createElementBlock, toDisplayString } from "vue";
-var HelloWorld_vue_vue_type_style_index_0_scoped_true_lang = "";
-var _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
 const _hoisted_1 = { class: "green" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   name: "HelloWorld",
@@ -19,7 +11,6 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-var HelloWorld = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-3b7b64fc"]]);
 const _sfc_main = /* @__PURE__ */ defineComponent({
   name: "CustomButton",
   emits: ["click"],
@@ -35,4 +26,4 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-export { _sfc_main as CustomButton, HelloWorld };
+export { _sfc_main as CustomButton, _sfc_main$1 as HelloWorld };
