@@ -2,14 +2,15 @@ import { defineStore, createPinia, setActivePinia } from "pinia";
 
 setActivePinia(createPinia());
 
-export const useCounterStore = defineStore({
-  id: "counter",
+export const useCounter2Store = defineStore({
+  id: "counter2",
   state: () => ({
     counter: 0,
   }),
 
   actions: {
-    increment() {
+    duplicate() {
+      this.counter++;
       this.counter++;
     },
   },
