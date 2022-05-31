@@ -1,18 +1,33 @@
 import CustomButton from "./CustomButton.vue";
 
-// More on default export:
-// https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Components/Button",
+  title: "Components/CustomButton",
   component: CustomButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    onClick: {},
+    click: {
+      description: "Reacts when the button gets clicked",
+      control: {
+        type: null,
+      },
+    },
+    isDisabled: {
+      description: "Sets if button is enabled.",
+      control: {
+        type: "boolean",
+      },
+    },
+    label: {
+      description: "Defines the label of the button",
+    },
   },
 };
 
 // More on component templates:
 // https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
+
+//👇 We create a “template” of how args map to rendering.
+// ------------------------------------------------------
 const Template = (args) => ({
   components: { CustomButton },
   // The story's `args` need to be mapped into the template through the
@@ -24,18 +39,59 @@ const Template = (args) => ({
   template: '<CustomButton v-bind="args" />',
 });
 
-export const Primary = Template.bind({});
+//👇 Each story then reuses that template.
+// ---------------------------------------
+export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
-Primary.args = {
-  label: "Primary",
+Default.args = {
+  label: "Click and see (Default)",
+  isDisabled: false,
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Secondary",
+Default.parameters = {
+  docs: {
+    source: {
+      code:
+        'import CustomButton from "@/components/CustomButton/CustomButton.vue"; \n\n' +
+        "<template>\n" +
+        '  <CustomButton :isDisabled="false" label="Click and see (Default)" />\n' +
+        "</template>",
+    },
+  },
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  label: "Large",
+export const Big = Template.bind({});
+Big.args = {
+  label: "Click and see (Big)",
+  isDisabled: false,
+};
+
+Big.parameters = {
+  docs: {
+    source: {
+      code:
+        'import CustomButton from "@/components/CustomButton/CustomButton.vue"; \n\n' +
+        "<template>\n" +
+        '  <CustomButton :isDisabled="false" label="Click and see (Big)" />\n' +
+        "</template>",
+    },
+  },
+};
+
+export const Biggest = Template.bind({});
+Biggest.args = {
+  label: "Click and see (Biggest)",
+  isDisabled: false,
+};
+
+Biggest.parameters = {
+  docs: {
+    source: {
+      code:
+        'import CustomButton from "@/components/CustomButton/CustomButton.vue"; \n\n' +
+        "<template>\n" +
+        '  <CustomButton :isDisabled="false" label="Click and see (Biggest)" />\n' +
+        "</template>",
+    },
+  },
 };

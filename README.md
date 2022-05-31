@@ -1,6 +1,8 @@
-# components-library sample
+# VUE 3 components library sample
 
-This is a sample with a few components to demostrate how to implement a library of components for vue 3 with vite, ts, cypress and storybook.
+This is a sample with a few components to demonstrate how to implement a library of components for vue 3 with vite, ts, cypress and storybook.
+
+under components' dir you'll find each component on its own dir with the storybook and cypress files.
 
 
 ## Project Setup
