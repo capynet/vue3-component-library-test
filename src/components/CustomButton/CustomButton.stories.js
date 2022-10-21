@@ -4,6 +4,13 @@ import IconArrowUp from "./icons/arrow-up.svg"
 import IconArrowLeft from "./icons/arrow-left.svg"
 import IconConfig from "./icons/config.svg"
 
+const icons = {
+  IconArrowDown,
+  IconArrowUp,
+  IconArrowLeft,
+  IconConfig
+};
+
 export default {
   title: "Components/CustomButton",
   component: CustomButton,
@@ -60,20 +67,16 @@ export default {
 
     icon: {
       description: "Sets an icon",
-      options: [
-        "Arrow down",
-        "Arrow up",
-        "Arrow left",
-        "Config"
-      ],
-      mapping: {
-        "Arrow down": IconArrowDown,
-        "Arrow up": IconArrowUp,
-        "Arrow left": IconArrowLeft,
-        "Config": IconConfig
-      },
+      options: Object.keys(icons),
+      mapping: icons,
       control: {
         type: "inline-radio",
+        // labels: {
+        //   IconArrowDown: "Arrow down",
+        //   IconArrowUp: "Arrow up",
+        //   IconArrowLeft: "Arrow left",
+        //   IconConfig: "Config"
+        // }
       },
     },
   },
@@ -102,7 +105,8 @@ export const Default = Template.bind({});
 Default.args = {
   label: "Click and see (Default)",
   isDisabled: false,
-  size: 'nelo'
+  size: 'nelo',
+  icon: IconArrowLeft
 };
 
 Default.parameters = {
