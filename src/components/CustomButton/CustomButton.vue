@@ -1,28 +1,62 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from "vue";
+
+const props = defineProps<{
   label: {
     type: string;
     default: "Button";
     required: true;
   };
+
   isDisabled: {
     type: boolean;
     default: false;
     required: false;
   };
+
+  size: {
+    type: "normal | big | bigger";
+    default: "normal";
+    required: false;
+  };
+
+  bgColor: {
+    type: string;
+    default: "primary-color";
+    required: false;
+  };
+
+  textColor: {
+    type: string;
+    default: "color-white";
+    required: false;
+  };
 }>();
 
 const emit = defineEmits<{
-  (e: "click"): void;
+  (e: "button.clicked"): void;
 }>();
 
-const onClick = (e: Event) => {
-  emit("click");
+const onClick = () => {
+  emit("button.clicked");
 };
+
+const classList = computed(() => {
+  return [
+    `btn-size--${props.size}`,
+    `btn-bgColor--${props.bgColor}`,
+    `btn-textColor--${props.textColor}`,
+  ];
+});
 </script>
 
 <template>
-  <button type="button" @click.prevent="onClick" :disabled="isDisabled">
+  <button
+    type="button"
+    @click.prevent="onClick"
+    :disabled="isDisabled"
+    :class="classList"
+  >
     {{ label }}
   </button>
 </template>

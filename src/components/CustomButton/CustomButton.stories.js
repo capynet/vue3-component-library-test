@@ -5,7 +5,7 @@ export default {
   component: CustomButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    click: {
+    onClick: {
       description: "Reacts when the button gets clicked",
       control: {
         type: null,
@@ -17,10 +17,31 @@ export default {
         type: "boolean",
       },
     },
+    size: {
+      description: "Sets size.",
+      control: {
+        type: "inline-radio",
+        options: ["normal", "big"]
+      },
+    },
     label: {
       description: "Defines the label of the button",
     },
-  },
+    bgColor: {
+      description: "Defines the label of the button",
+      control: { type: 'color', presetColors: ['red', 'green']}
+    },
+    textColor: {
+      description: "Defines the label of the button",
+      control: { type: 'color', 
+      presetColors: [
+        { color: '#321234', title: 'white' },
+        { color: '#ff4785', title: 'Coral' },
+        { color: '#369', title: 'Furulanga' },
+      ],
+    }
+    },
+  }
 };
 
 // More on component templates:
@@ -51,11 +72,12 @@ Default.args = {
 Default.parameters = {
   docs: {
     source: {
-      code:
-        'import CustomButton from "@/components/CustomButton/CustomButton.vue"; \n\n' +
-        "<template>\n" +
-        '  <CustomButton :isDisabled="false" label="Click and see (Default)" />\n' +
-        "</template>",
+      code: `
+import CustomButton from "@/components/CustomButton/CustomButton.vue";
+
+<template>
+  <CustomButton :isDisabled="false" label="Click and see (Default)" />
+</template>`,
     },
   },
 };
