@@ -31,6 +31,12 @@ const props = defineProps<{
     default: "color-white";
     required: false;
   };
+
+  icon: {
+    type: string;
+    default: false;
+    required: false;
+  };
 }>();
 
 const emit = defineEmits<{
@@ -57,7 +63,7 @@ const classList = computed(() => {
     :disabled="isDisabled"
     :class="classList"
   >
-    {{ label }}
+    {{ label }} <img :src="icon" alt="">
   </button>
 </template>
 

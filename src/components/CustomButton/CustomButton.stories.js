@@ -1,4 +1,8 @@
 import CustomButton from "./CustomButton.vue";
+import IconArrowDown from "./icons/arrow-down.svg"
+import IconArrowUp from "./icons/arrow-up.svg"
+import IconArrowLeft from "./icons/arrow-left.svg"
+import IconConfig from "./icons/config.svg"
 
 export default {
   title: "Components/CustomButton",
@@ -39,7 +43,7 @@ export default {
 
     bgColor: {
       description: "Defines the label of the button",
-      control: { type: "color", presetColors: ["red", "green"] },
+      control: {type: "color", presetColors: ["red", "green"]},
     },
 
     textColor: {
@@ -47,10 +51,29 @@ export default {
       control: {
         type: "color",
         presetColors: [
-          { color: "#321234", title: "white" },
-          { color: "#ff4785", title: "Coral" },
-          { color: "#369", title: "Furulanga" },
+          {color: "#321234", title: "white"},
+          {color: "#ff4785", title: "Coral"},
+          {color: "#369", title: "Furulanga"},
         ],
+      },
+    },
+
+    icon: {
+      description: "Sets an icon",
+      options: [
+        "Arrow down",
+        "Arrow up",
+        "Arrow left",
+        "Config"
+      ],
+      mapping: {
+        "Arrow down": IconArrowDown,
+        "Arrow up": IconArrowUp,
+        "Arrow left": IconArrowLeft,
+        "Config": IconConfig
+      },
+      control: {
+        type: "inline-radio",
       },
     },
   },
@@ -62,11 +85,11 @@ export default {
 //👇 We create a “template” of how args map to rendering.
 // ------------------------------------------------------
 const Template = (args) => ({
-  components: { CustomButton },
+  components: {CustomButton},
   // The story's `args` need to be mapped into the template through the
   // `setup()` method
   setup() {
-    return { args };
+    return {args};
   },
   // And then the `args` are bound to your component with `v-bind="args"`
   template: '<CustomButton v-bind="args" />',
