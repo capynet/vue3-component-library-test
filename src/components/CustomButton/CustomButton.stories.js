@@ -21,9 +21,15 @@ export default {
 
     size: {
       description: "Sets size.",
+      options: ['foo', 'nelo', 'bar'],
       control: {
         type: "inline-radio",
-        options: ["normal", "big"],
+        labels: {
+          foo: 'FOO',
+          nelo: 'PriO',
+          bar: 'BAR'
+        }
+
       },
     },
 
@@ -73,6 +79,7 @@ export const Default = Template.bind({});
 Default.args = {
   label: "Click and see (Default)",
   isDisabled: false,
+  size: 'nelo'
 };
 
 Default.parameters = {
