@@ -11,37 +11,43 @@ export default {
         type: null,
       },
     },
+
     isDisabled: {
       description: "Sets if button is enabled.",
       control: {
         type: "boolean",
       },
     },
+
     size: {
       description: "Sets size.",
       control: {
         type: "inline-radio",
-        options: ["normal", "big"]
+        options: ["normal", "big"],
       },
     },
+
     label: {
       description: "Defines the label of the button",
     },
+
     bgColor: {
       description: "Defines the label of the button",
-      control: { type: 'color', presetColors: ['red', 'green']}
+      control: { type: "color", presetColors: ["red", "green"] },
     },
+
     textColor: {
       description: "Defines the label of the button",
-      control: { type: 'color', 
-      presetColors: [
-        { color: '#321234', title: 'white' },
-        { color: '#ff4785', title: 'Coral' },
-        { color: '#369', title: 'Furulanga' },
-      ],
-    }
+      control: {
+        type: "color",
+        presetColors: [
+          { color: "#321234", title: "white" },
+          { color: "#ff4785", title: "Coral" },
+          { color: "#369", title: "Furulanga" },
+        ],
+      },
     },
-  }
+  },
 };
 
 // More on component templates:
