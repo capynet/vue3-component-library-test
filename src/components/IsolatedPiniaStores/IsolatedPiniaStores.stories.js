@@ -26,7 +26,7 @@ Default.args = {};
 Default.parameters = {
   docs: {
     source: {
-      code:`
+      code: `
 import { useCounterStore } from "@/stores/counter";
 import { useCounter2Store } from "@/stores/counter2";
 const store = useCounterStore();
@@ -39,6 +39,7 @@ store.increment();
 const onClickStore2 = (e: Event) => {
 store2.duplicate();
 };
-`},
+`,
+    },
   },
 };

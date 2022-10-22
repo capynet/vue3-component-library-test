@@ -63,7 +63,7 @@ const classList = computed(() => {
     :disabled="isDisabled"
     :class="classList"
   >
-    {{ label }} <img :src="icon" alt="">
+    {{ label }} <img :src="icon" alt="" />
   </button>
 </template>
 

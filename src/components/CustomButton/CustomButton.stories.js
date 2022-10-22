@@ -1,14 +1,14 @@
 import CustomButton from "./CustomButton.vue";
-import IconArrowDown from "./icons/arrow-down.svg"
-import IconArrowUp from "./icons/arrow-up.svg"
-import IconArrowLeft from "./icons/arrow-left.svg"
-import IconConfig from "./icons/config.svg"
+import IconArrowDown from "./icons/arrow-down.svg";
+import IconArrowUp from "./icons/arrow-up.svg";
+import IconArrowLeft from "./icons/arrow-left.svg";
+import IconConfig from "./icons/config.svg";
 
 const icons = {
   IconArrowDown,
   IconArrowUp,
   IconArrowLeft,
-  IconConfig
+  IconConfig,
 };
 
 export default {
@@ -32,15 +32,14 @@ export default {
 
     size: {
       description: "Sets size.",
-      options: ['foo', 'nelo', 'bar'],
+      options: ["foo", "nelo", "bar"],
       control: {
         type: "inline-radio",
         labels: {
-          foo: 'FOO',
-          nelo: 'PriO',
-          bar: 'BAR'
-        }
-
+          foo: "FOO",
+          nelo: "PriO",
+          bar: "BAR",
+        },
       },
     },
 
@@ -50,7 +49,7 @@ export default {
 
     bgColor: {
       description: "Defines the label of the button",
-      control: {type: "color", presetColors: ["red", "green"]},
+      control: { type: "color", presetColors: ["red", "green"] },
     },
 
     textColor: {
@@ -58,9 +57,9 @@ export default {
       control: {
         type: "color",
         presetColors: [
-          {color: "#321234", title: "white"},
-          {color: "#ff4785", title: "Coral"},
-          {color: "#369", title: "Furulanga"},
+          { color: "#321234", title: "white" },
+          { color: "#ff4785", title: "Coral" },
+          { color: "#369", title: "Furulanga" },
         ],
       },
     },
@@ -88,11 +87,11 @@ export default {
 //👇 We create a “template” of how args map to rendering.
 // ------------------------------------------------------
 const Template = (args) => ({
-  components: {CustomButton},
+  components: { CustomButton },
   // The story's `args` need to be mapped into the template through the
   // `setup()` method
   setup() {
-    return {args};
+    return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
   template: '<CustomButton v-bind="args" />',
@@ -105,8 +104,8 @@ export const Default = Template.bind({});
 Default.args = {
   label: "Click and see (Default)",
   isDisabled: false,
-  size: 'nelo',
-  icon: IconArrowLeft
+  size: "nelo",
+  icon: IconArrowLeft,
 };
 
 Default.parameters = {

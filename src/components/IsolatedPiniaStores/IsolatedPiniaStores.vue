@@ -4,11 +4,11 @@ import { useCounter2Store } from "@/stores/counter2";
 const store = useCounterStore();
 const store2 = useCounter2Store();
 
-const onClickStore1 = (e: Event) => {
+const onClickStore1 = () => {
   store.increment();
 };
 
-const onClickStore2 = (e: Event) => {
+const onClickStore2 = () => {
   store2.duplicate();
 };
 </script>
